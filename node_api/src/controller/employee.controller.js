@@ -66,7 +66,7 @@ const create = (req,res)=>{
 
 const update = (req,res)=>{
     const {
-        employee_id,
+        
         firstname,
         lastname,
         tel,
@@ -96,10 +96,30 @@ const update = (req,res)=>{
     })
 }
 
+const remove =(req,res)=>{
+    //var id = req.params.id
+    var {id} = req.params
+    var sql = "DELETE FROM employee WHERE employee_id= ?"
+    //var param_sql = [id]
+    db.query(sql,[id],(error,row)=>{
+        if(error){
+            res.json({
+                message: error,
+                error: true
+            })
+        }else{
+            res.json({
+                message: "Deleted Successful...!!!",
+                data : row
+            })
+        }
+    })
+}
 
 module.exports = {
     getAll,
     getOne,
     create,
-    update
+    update,
+    remove
 }
