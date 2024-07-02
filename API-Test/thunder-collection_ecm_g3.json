@@ -1,0 +1,60 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "ecm_g3",
+    "collectionId": "0084b5f2-5b2f-4ed4-865f-5167932210e3",
+    "dateExported": "2024-07-02T03:02:09.240Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "deee1ab4-ecba-4ea9-894f-e3bd0bd458c1",
+            "name": "employee",
+            "containerId": "",
+            "created": "2024-07-02T03:01:58.921Z",
+            "sortNum": 10000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "9138b9e0-a377-45a0-8237-874de7df5183",
+            "colId": "0084b5f2-5b2f-4ed4-865f-5167932210e3",
+            "containerId": "deee1ab4-ecba-4ea9-894f-e3bd0bd458c1",
+            "name": "getAll",
+            "url": "http://localhost:2004/api/employee",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-07-02T03:01:29.283Z",
+            "modified": "2024-07-02T03:01:29.283Z",
+            "headers": []
+        },
+        {
+            "_id": "523bafd1-0c3d-40ad-a4c2-d2827805feb1",
+            "colId": "0084b5f2-5b2f-4ed4-865f-5167932210e3",
+            "containerId": "deee1ab4-ecba-4ea9-894f-e3bd0bd458c1",
+            "name": "create",
+            "url": "http://localhost:2004/api/employee",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-07-02T03:01:39.515Z",
+            "modified": "2024-07-02T03:01:39.515Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"firstname\" : \"tom\",\n  \"lastname\" : \"Tina\",\n  \"tel\" : \"086785675\",\n  \"email\" : \"qewerw234@gmail.com\",\n  \"base_salary\" : \"900\",\n  \"address\" : \"#34 st...\",\n  \"province\" : \"BB\",\n  \"country\" : \"cmabodai\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "b7c3d6d6-d5ce-4a45-af56-8b65da83c60f",
+            "colId": "0084b5f2-5b2f-4ed4-865f-5167932210e3",
+            "containerId": "deee1ab4-ecba-4ea9-894f-e3bd0bd458c1",
+            "name": "getOne",
+            "url": "http://localhost:2004/api/employee/17",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-07-02T03:01:41.195Z",
+            "modified": "2024-07-02T03:01:41.195Z",
+            "headers": []
+        }
+    ],
+    "ref": "QGjRdZclkSjHcQJuIThio4VZbRQh842WycfDEa105NZ0Er6yj6Xb_nBqzkeD_DZEa-2kJX7TRA2UzAcslPz7AA"
+}

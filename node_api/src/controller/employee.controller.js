@@ -33,17 +33,43 @@ const getOne = (req,res)=>{
             })
         }
      })
-
-}
-const crate = (req,res)=>{
-
 }
 
+const create = (req,res)=>{
+
+
+  
+    const {
+            firstname,
+            lastname,
+            tel,
+            email,
+            base_salary,
+            address,
+            province,
+            country
+          } = req.body
+
+     var sql = "INSERT INTO employee (firstname, lastname, tel, email, base_salary, address, province, country) VALUES(?, ?, ?, ?, ?, ?, ?, ?)"
+     var param_data = [firstname,lastname,tel,email,base_salary,address,province,country]
+     db.query(sql,param_data,(error,row)=>{
+        if(error){
+            res.json({
+                message : error,
+                error : true
+            })
+        }else{
+            res.json({
+                message:"Employee Created Successfuly!!"
+            })
+        }
+     })    
+}
 
 
 
 module.exports = {
     getAll,
     getOne,
-    crate
+    create
 }

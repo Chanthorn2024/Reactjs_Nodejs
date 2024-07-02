@@ -7,6 +7,7 @@
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -26,7 +27,8 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `employee`
 --
-DROP TABLE employees;
+create database ecm_g3;
+use ecm_g3;
 CREATE TABLE employee (
   employee_id int(11) NOT NULL,
   firstname varchar(120) NOT NULL,
