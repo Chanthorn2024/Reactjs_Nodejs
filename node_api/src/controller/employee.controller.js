@@ -1,7 +1,8 @@
 const db = require("../util/db.js")
+const { isEmptyOrNull } = require("../util/service.js")
 
 
-// fuction Get All Data from Table
+// fuction Get All Data from Table"
 const getAll = (req, res)=>{
      var sql ="SELECT * FROM employee" 
      db.query(sql,(error,row)=>{
@@ -49,15 +50,29 @@ const create = (req,res)=>{
           } = req.body
      // end check ehich field Required 
      var message = {} 
-        if(firstname == null || firstname == ""){
+        /*
+            if(firstname == null || firstname == ""){
+                message.firstname = "firstname required!"
+            }
+            if(lastname == null || lastname == ""){
+                message.lasstname = "lastname required!"
+            }
+            if(tel == null || tel == ""){
+                message.tel = "telephone required!"
+            }
+        */
+        /* USE fuction by IsEmpty */
+        if(isEmptyOrNull(firstname)){
             message.firstname = "firstname required!"
         }
-        if(lastname == null || lastname == ""){
+        if(isEmptyOrNull(lastname)){
             message.lasstname = "lastname required!"
         }
-        if(tel == null || tel == ""){
+        if(isEmptyOrNull(tel)){
              message.tel = "telephone required!"
         }
+
+
        //Object.keys(message).length = 3  
        //Object.keys(message).length => return lenght of  object message 
       if(Object.keys(message).length > 0){
