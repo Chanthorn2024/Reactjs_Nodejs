@@ -3,7 +3,8 @@ function CategoryPage(){
 
     return (
         <div>
-            <h1>CategoryPage</h1>
+            <div><h1>CategoryPage</h1></div>
+            <div><h1>CategoryPage</h1></div>
         </div>
     )
 }

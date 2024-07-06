@@ -1,5 +1,11 @@
 const express = require('express') // import
 const app = express() // extend express
+const cors = require("cors")
+
+// allow origin (npm i cors)
+app.use(cors({
+    origin:"*"
+}))
 app.use(express.json())
 const db = require("./src/util/db")
 

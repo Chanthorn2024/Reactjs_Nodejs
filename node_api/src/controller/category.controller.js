@@ -8,6 +8,7 @@ const getAll = (req,res)=>{
     db.query(sql,(error,row)=>{
         if(!error){
             res.json({
+                total:2,
                 list : row
             })
         }else{
@@ -31,6 +32,7 @@ const getOne=(req,res)=>{
             })
         }else{
             res.json({
+                total:2,
                 list:row
             })
         }

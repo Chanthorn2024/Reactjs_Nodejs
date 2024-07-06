@@ -1,5 +1,5 @@
 
-import axios from 'axios'
+
 import {useEffect, useState} from "react"
 import {  Table,  Button,  Modal, Form, } from "react-bootstrap"
 import { request } from '../../share/request'
@@ -20,7 +20,6 @@ function CategoryPageDash(){
        getList();
     },[])
 
-    const server = "http://localhost:8081/api/"
     const getList = () =>{
         request("category","get").then(res=>{
             if(res){
@@ -32,16 +31,16 @@ function CategoryPageDash(){
         })
     }
 
-    const onDelete = () => {
-        setShow(false)
-        var category_id = item.category_id
-        request("category/"+category_id,"delete").then(res=>{
-            var data = res.data
-            var tmp_data = list.filter((item)=>item.category_id != category_id)
-            setList(tmp_data)
+    // const onDelete = () => {
+    //     setShow(false)
+    //     var category_id = item.category_id
+    //     request("category/"+category_id,"delete").then(res=>{
+    //         var data = res.data
+    //         var tmp_data = list.filter((item)=>item.category_id != category_id)
+    //         setList(tmp_data)
 
-        })
-    }
+    //     })
+    // }
 
     const onClickBtnDelete = (param) => {
         setItem(param)
@@ -158,7 +157,7 @@ function CategoryPageDash(){
 
                     <Modal.Footer>
                         <Button variant="secondary" onClick={onHideModal}>No</Button>
-                        <Button variant="primary" onClick={onDelete}>Yes</Button>
+                        {/* <Button variant="primary" onClick={onDelete}>Yes</Button> */}
                     </Modal.Footer>
                 </Modal>
             </div>
