@@ -1,6 +1,7 @@
 import {BrowserRouter,Routes,Route} from "react-router-dom"
 import "./App.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import HomePage from "./page/home/HomePage";
 import AboutPage from "./page/about/AboutPage";
 import CustomerPage from "./page/customer/CustomerPage"
