@@ -13,6 +13,10 @@ import Layout from "./component/layout/Layout";
 import LayoutDashboard from "./component/layout/LayoutDashboard";
 import HomePageDash from "./page-dashboard/home/HomePage";
 import CategoryPageDash from "./page-dashboard/category/CategoryPage"
+import LayoutDashboardLogin from "./component/layout/LayoutDashboardLogin";
+import LoginDashBoard from "./page-dashboard/login/LoginDashBoard";
+import RegisterDashboard from "./page-dashboard/register/RegisterDashboard";
+
 // import ProductPageDash from "./page-dashboard/product/ProductPageDash"
 // import CustomerPageDash from "./page-dashboard/customer/CustomerPageDash";
 //import OrderPageDash from "./page-dashboard/order/OrderPageDash";
@@ -45,6 +49,11 @@ function App() {
         </Route>
 
         {/* backend login register*/}
+        <Route path="/dashboard" element={<LayoutDashboardLogin />}>
+            <Route path="login" element={<LoginDashBoard /> } />
+            <Route path="register" element={<RegisterDashboard />} />
+        </Route>
+
       </Routes>
     </BrowserRouter>
     
